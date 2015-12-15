@@ -15,9 +15,17 @@
 		<project.source.version>1.7</project.source.version>
 		<project.target.version>1.7</project.target.version>
 		<project.encoding>UTF-8</project.encoding>
+
+		<activiti.version>5.16</activiti.version>
 	</properties>
 
 	<repositories>
+		<repository>
+			<id>activiti</id>
+			<name>Activiti</name>
+			<url>http://maven.alfresco.com/nexus/content/repositories/activiti/</url>
+		</repository>
+
 		<repository>
 			<id>vaadin-addons</id>
 			<url>http://maven.vaadin.com/vaadin-addons</url>
@@ -47,6 +55,18 @@
 	</dependencyManagement>
 
 	<dependencies>
+		<!-- Activiti -->
+		<dependency>
+			<groupId>org.activiti</groupId>
+			<artifactId>activiti-engine</artifactId>
+			<version>${activiti.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.activiti</groupId>
+			<artifactId>activiti-spring</artifactId>
+			<version>${activiti.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
